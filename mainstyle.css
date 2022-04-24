@@ -92,3 +92,7 @@ body{
 .mainGrid h1, .mainGrid h2 {
     margin-left: 20px;
 }
+
+.myskils .icon {
+    max-height: 5em;
+}
