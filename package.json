@@ -2,6 +2,7 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "delay": "^5.0.0",
+    "progressbar.js": "^1.1.0",
     "scss": "^0.2.4"
   }
 }

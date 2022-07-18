@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap");
 .basicTitle {
   position: relative;
   left: -300px;
+  padding: 0.1em;
+  font-size: 1em;
+}
+
+.byMichal {
+  position: relative;
 }
 
 .titleoneAnim {
@@ -13,28 +20,113 @@
           animation-fill-mode: forwards;
 }
 
+.titleduoAnim {
+  -webkit-animation-name: titleduo;
+          animation-name: titleduo;
+  -webkit-animation-duration: 3500ms;
+          animation-duration: 3500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes titleone {
   0% {
     left: -300px;
+    opacity: 0;
+  }
+  60% {
+    left: 0px;
+    opacity: 1;
+    text-shadow: 0px 0px rgba(0, 0, 0, 0);
   }
   100% {
     left: 0px;
+    opacity: 1;
+    text-shadow: 5px 5px rgb(0, 0, 0);
   }
 }
 
 @keyframes titleone {
   0% {
     left: -300px;
+    opacity: 0;
+  }
+  60% {
+    left: 0px;
+    opacity: 1;
+    text-shadow: 0px 0px rgba(0, 0, 0, 0);
   }
   100% {
     left: 0px;
+    opacity: 1;
+    text-shadow: 5px 5px rgb(0, 0, 0);
+  }
+}
+@-webkit-keyframes titleduo {
+  0% {
+    font-size: 1em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    font-size: 3em;
+  }
+  100% {
+    font-size: 2.2em;
+    opacity: 1;
+  }
+}
+@keyframes titleduo {
+  0% {
+    font-size: 1em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    font-size: 3em;
+  }
+  100% {
+    font-size: 2.2em;
+    opacity: 1;
+  }
+}
+.progressbarHTML {
+  -webkit-animation-name: HTMLprogress;
+          animation-name: HTMLprogress;
+  -webkit-animation-duration: 3500ms;
+          animation-duration: 3500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes HTMLprogress {
+  0% {
+    width: 0%;
+    color: #ffffff;
+  }
+  100% {
+    width: 90%;
+    color: #000000;
   }
 }
 
+@keyframes HTMLprogress {
+  0% {
+    width: 0%;
+    color: #ffffff;
+  }
+  100% {
+    width: 90%;
+    color: #000000;
+  }
+}
 * {
-  color: white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
 }
 
 body {
@@ -43,184 +135,148 @@ body {
 }
 
 .mainGrid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   font-family: "Audiowide", cursive;
   background-color: rgba(0, 0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
   width: 100%;
 }
-
 .mainGrid .top {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 7;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
+  grid-row-start: 1;
   grid-row-end: 3;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border: 2px solid white;
-  min-height: 20vh;
-  display: -ms-grid;
+  border: 2px solid rgb(255, 255, 255);
+  max-height: 18em;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 40%;
+  grid-template-rows: 1fr 1fr;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
+.mainGrid .top .byMichal {
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2em;
+  font-family: "MonteCarlo", cursive;
+}
 .mainGrid .top .menu {
   width: 100%;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  grid-column-start: 3;
   grid-column-end: 4;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
+  grid-row-start: 2;
   grid-row-end: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
-
 .mainGrid .aboutme {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
+  grid-row-start: 3;
   grid-row-end: 10;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   min-height: 70vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
 .mainGrid .myskils {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
+  grid-column-start: 3;
   grid-column-end: 7;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
+  grid-row-start: 3;
   grid-row-end: 6;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   min-height: 25vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15%, 60%, 15%;
-      grid-template-columns: 15%, 60%, 15%;
+  grid-template-columns: 15%, 60%, 15%;
   background-color: rgba(0, 0, 0, 0.7);
+  padding: 2em;
 }
-
 .mainGrid .myskils .html {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
-  -ms-grid-row: 2;
-  grid-row: 2 / 2;
-  display: -ms-grid;
+  grid-row: 2/2;
   display: grid;
-  -ms-grid-columns: 20% 70% 7%;
-      grid-template-columns: 20% 70% 7%;
+  grid-template-columns: 20% 70% 7%;
 }
-
 .mainGrid .myskils .css {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
-  -ms-grid-row: 3;
-  grid-row: 3 / 3;
-  display: -ms-grid;
+  grid-row: 3/3;
   display: grid;
-  -ms-grid-columns: 20% 70% 7%;
-      grid-template-columns: 20% 70% 7%;
+  grid-template-columns: 20% 70% 7%;
   margin-top: 10px;
 }
-
 .mainGrid .myskils .javascript {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
-  -ms-grid-row: 4;
-  grid-row: 4 / 4;
-  display: -ms-grid;
+  grid-row: 4/4;
   display: grid;
-  -ms-grid-columns: 20% 70% 7%;
-      grid-template-columns: 20% 70% 7%;
+  grid-template-columns: 20% 70% 7%;
   margin-top: 10px;
 }
-
 .mainGrid .myskils .angular {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
-  -ms-grid-row: 5;
-  grid-row: 5 / 5;
-  display: -ms-grid;
+  grid-row: 5/5;
   display: grid;
-  -ms-grid-columns: 20% 70% 7%;
-      grid-template-columns: 20% 70% 7%;
+  grid-template-columns: 20% 70% 7%;
   margin-top: 10px;
 }
-
 .mainGrid .myskils .node {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
-  -ms-grid-row: 6;
-  grid-row: 6 / 6;
-  display: -ms-grid;
+  grid-row: 6/6;
   display: grid;
-  -ms-grid-columns: 20% 70% 7%;
-      grid-template-columns: 20% 70% 7%;
+  grid-template-columns: 20% 70% 7%;
   margin-top: 10px;
 }
-
 .mainGrid .mywork {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
+  grid-column-start: 3;
   grid-column-end: 7;
-  -ms-grid-row: 6;
-      grid-row-start: 6;
+  grid-row-start: 6;
   grid-row-end: 9;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   min-height: 25vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
 .mainGrid .mygithub {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
+  grid-column-start: 3;
   grid-column-end: 7;
-  -ms-grid-row: 9;
-      grid-row-start: 9;
+  grid-row-start: 9;
   grid-row-end: 10;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.7);
 }
-
 .mainGrid .contact {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 7;
-  -ms-grid-row: 10;
-      grid-row-start: 10;
+  grid-row-start: 10;
   grid-row-end: 11;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: rgba(0, 0, 0, 0.7);
 }
+.mainGrid .footer {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  border: 2px solid rgb(255, 255, 255);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 5em;
+}
 
-.mainGrid h1, .mainGrid h2 {
+.mainGrid h1,
+.mainGrid h2 {
   margin-left: 20px;
 }
 
@@ -236,6 +292,11 @@ body {
   text-align: center;
   padding: 5px;
 }
+.progressbar .progressbarHTML {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 0%;
+}
 
 .proc {
   margin-top: 0.75em;
@@ -246,4 +307,11 @@ body {
 .JSts {
   height: 3.6em;
 }
-/*# sourceMappingURL=mainstyle.css.map */
+
+/* #barhtml::before {
+    content: "";
+    position: relative;
+    background-color: aqua;
+    width: 90%;
+    height: 110%;
+} *//*# sourceMappingURL=mainstyle.css.map */
