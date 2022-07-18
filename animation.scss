@@ -1,0 +1,25 @@
+//start positions
+.basicTitle{
+    position: relative;
+    left: -300px;   
+   }
+
+
+//animation classes
+.titleoneAnim{
+    animation-name: titleone;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+//keyframes
+@keyframes titleone {
+    0%{
+        left: -300px;
+    }
+    100%{
+        left: 0px;
+    }
+    
+}
+

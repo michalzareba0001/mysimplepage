@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Simple Page</title>
     <link href="mainstyle.css" rel="stylesheet">
-    <script href="mainscript.js"></script>
-</head>
+    <script type="text/javascript" src="./mainscript.js">
+
+    </script>
+    </head>
 <body>
     <div class="mainGrid">
             <div class="top">
-                <h1>My simple portfolio page</h1>
+                <h1>
+                    <div id="my" class="basicTitle">My </div>
+                    <div id="simple" class="basicTitle"> simple </div>
+                    <div id="portfolio" class="basicTitle"> portfolio </div>
+                    <div id="page"class="basicTitle"> page </div>
+                </h1>
                 <div class="menu">
                     <span><a href="">About Me</a></span>
                     <span><a href="">My Skills (so far)</a></span>
@@ -28,19 +35,35 @@
                 <h2>My Skills (so far)</h2>
                 <div class="html">
                     <img class="icon" src="./icons/html5.svg">
+                    <div class="progressbar" id="barhtml">HTML</div>
+                    <div class="proc">0%</div>
                 </div>
+
                 <div class="css">
                     <img class="icon" src="./icons/css3.svg">
+                    <div class="progressbar" id="barcss">CSS</div>
+                    <div class="proc">0%</div>
                 </div>
+
                 <div class="javascript">
-                <img class="icon" src="./icons/javascript.svg">
-                <img class="icon" src="./icons/typescript.svg">
+                <div class="icon">
+                    <p class="JSts"> 
+                    <img src="./icons/javascript.svg" height="100%"> / 
+                <img src="./icons/typescript.svg" height="100%">
+                     </p>   
+                </div>
+                <div class="progressbar" id="barjsts">JAVASCRIPT/TYPESCRIPT</div>
+                <div class="proc">0%</div>
                 </div>
                 <div class="angular">
-                    <img class="icon" src="./icons/angular.svg">
+                    <img class="icon" src="./icons/icons8-angularjs.svg">
+                    <div class="progressbar" id="barangular">ANGULARJS</div>
+                    <div class="proc">0%</div>
                 </div>
                 <div class="node">
-                    <img class="icon" src="./icons/node-js.svg">
+                    <img class="icon" src="./icons/icons8-nodejs2.svg">
+                    <div class="progressbar" id="barnode">NODEJS</div>
+                    <div class="proc">0%</div>
                 </div>
             </div>
             <div class="mywork">

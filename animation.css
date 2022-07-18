@@ -1,0 +1,32 @@
+.basicTitle {
+  position: relative;
+  left: -300px;
+}
+
+.titleoneAnim {
+  -webkit-animation-name: titleone;
+          animation-name: titleone;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes titleone {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes titleone {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/*# sourceMappingURL=animation.css.map */
