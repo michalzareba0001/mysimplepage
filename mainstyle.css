@@ -222,8 +222,22 @@ body {
   grid-row-start: 6;
   grid-row-end: 9;
   border: 2px solid rgb(255, 255, 255);
-  min-height: 25vh;
+  min-height: 25em;
   background-color: rgba(0, 0, 0, 0.7);
+}
+.mainGrid .mywork .screens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.mainGrid .mywork .screens img {
+  position: relative;
+  height: 12em;
+  padding: 1em;
+}
+.mainGrid .mywork .screens img:hover {
+  opacity: 0.5;
+  transform: scale(1.1, 1.1);
+  transition: 1s;
 }
 .mainGrid .mygithub {
   grid-column-start: 3;
