@@ -66,25 +66,4 @@
 }
 
 
-//PROGRESSBARS
-.progressbarHTML{
-    animation-name: HTMLprogress;
-    animation-duration: 3500ms;
-    animation-fill-mode: forwards;
-}
 
-
-@keyframes HTMLprogress {
-    0%{
-        width: 0%;
-        color: #ffffff;
-
-    }
-    100%{
-        width: 90%;
-        color: #000000;
-
-    }
-
-    
-}

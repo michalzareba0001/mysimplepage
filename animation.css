@@ -91,34 +91,4 @@
     font-size: 2.2em;
     opacity: 1;
   }
-}
-.progressbarHTML {
-  -webkit-animation-name: HTMLprogress;
-          animation-name: HTMLprogress;
-  -webkit-animation-duration: 3500ms;
-          animation-duration: 3500ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes HTMLprogress {
-  0% {
-    width: 0%;
-    color: #ffffff;
-  }
-  100% {
-    width: 90%;
-    color: #000000;
-  }
-}
-
-@keyframes HTMLprogress {
-  0% {
-    width: 0%;
-    color: #ffffff;
-  }
-  100% {
-    width: 90%;
-    color: #000000;
-  }
 }/*# sourceMappingURL=animation.css.map */
